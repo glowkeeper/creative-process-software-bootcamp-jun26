@@ -1,0 +1,347 @@
+/* =====================================================
+  Project Tracker – Week 7 Showcase Styles
+   ===================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #1f2933;
+  background-color: #f3f4f6;
+}
+
+/* App container centres and constrains the page width */
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header {
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin-top: 0.4rem;
+  color: #4b5563;
+}
+
+/* --------------------------------------------------
+  Navigation
+   -------------------------------------------------- */
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #0b5ed7;
+  text-decoration: none;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+nav a:hover {
+  background-color: #eff6ff;
+}
+
+nav a.active {
+  color: #ffffff;
+  background-color: #0b5ed7;
+  border-color: #0b5ed7;
+}
+
+nav a:focus {
+  outline: 2px solid #0b5ed7;
+  outline-offset: 2px;
+}
+
+main {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* General page section */
+.page-section {
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.page-section h2 {
+  margin-top: 0;
+}
+
+/* --------------------------------------------------
+   Board layout
+   -------------------------------------------------- */
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.column {
+  flex: 1;
+  min-width: 230px;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+
+.column h3 {
+  margin-top: 0;
+}
+
+.column-count {
+  display: inline-block;
+  margin-left: 0.35rem;
+  min-width: 1.6rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 999px;
+  color: #374151;
+  background-color: #e5e7eb;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.empty-column {
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* --------------------------------------------------
+   Task cards
+   -------------------------------------------------- */
+
+.card {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 0.6rem 0.7rem;
+  margin-bottom: 0.6rem;
+}
+
+.card-title {
+  margin: 0 0 0.3rem 0;
+  font-weight: bold;
+}
+
+.card-description {
+  margin: 0 0 0.4rem 0;
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+.status-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  color: #4b5563;
+  font-size: 0.85rem;
+}
+
+.status-control select {
+  width: 100%;
+  padding: 0.35rem 0.45rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  background-color: #ffffff;
+  font: inherit;
+}
+
+.edit-task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.edit-task-form label,
+.task-controls label {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.2rem;
+  color: #4b5563;
+  font-size: 0.85rem;
+}
+
+.edit-task-form input,
+.edit-task-form textarea {
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.edit-task-form textarea {
+  min-height: 5rem;
+  resize: vertical;
+}
+
+/* --------------------------------------------------
+  Add task controls
+   -------------------------------------------------- */
+
+.task-controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.task-controls input[type="text"] {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 1rem;
+  flex: 1;
+  min-width: 180px;
+}
+
+.task-controls button {
+  align-self: end;
+}
+
+.task-controls input[type="text"]:focus {
+  outline: 2px solid #0b5ed7;
+  outline-offset: 1px;
+}
+
+button {
+  padding: 0.4rem 0.9rem;
+  background-color: #0b5ed7;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0a4db3;
+}
+
+button:focus {
+  outline: 2px solid #0b5ed7;
+  outline-offset: 2px;
+}
+
+.secondary-button {
+  background-color: #4b5563;
+}
+
+.secondary-button:hover {
+  background-color: #374151;
+}
+
+.danger-button {
+  background-color: #b42318;
+}
+
+.danger-button:hover {
+  background-color: #912018;
+}
+
+.status-message {
+  color: #4b5563;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  min-height: 1.5em;
+}
+
+.task-count {
+  font-weight: bold;
+  color: #1f2933;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+.board-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* --------------------------------------------------
+   Summary
+   -------------------------------------------------- */
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.summary-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #f9fafb;
+}
+
+.summary-card span {
+  color: #4b5563;
+  font-size: 0.85rem;
+}
+
+.summary-card strong {
+  font-size: 1.5rem;
+}
+
+/* --------------------------------------------------
+   Footer
+   -------------------------------------------------- */
+
+footer {
+  border-top: 1px solid #d1d5db;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  color: #4b5563;
+}
+
+@media (max-width: 900px) {
+  .board {
+    flex-direction: column;
+  }
+
+  .summary-grid {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
+}
