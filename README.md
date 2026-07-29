@@ -98,7 +98,7 @@ From the root of this repository:
 
 ```bash
 cd src/project-tracker/week-07/showcase
-npm ci
+npm install
 npm run dev
 ```
 
@@ -136,7 +136,7 @@ React examples from Week 4 onwards are separate Vite applications. Enter the
 folder you want, then use the same pattern:
 
 ```bash
-npm ci
+npm install
 npm run dev
 ```
 
